@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AdminAuthRuteModule } from './admin-auth-rute.module';
+import { AdminAuthRoutingModule } from './admin-auth-routing.module';
 
 
 
@@ -8,7 +8,7 @@ import { AdminAuthRuteModule } from './admin-auth-rute.module';
   declarations: [],
   imports: [
     CommonModule,
-    AdminAuthRuteModule
+    AdminAuthRoutingModule
   ]
 })
 export class AdminAuthModule { }
