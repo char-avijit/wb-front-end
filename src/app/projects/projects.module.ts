@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectsRoutingModule } from './projects-routing.module';
+import { AllProjectsComponent } from './all-projects/all-projects.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    AllProjectsComponent
+  ],
   imports: [
     CommonModule,
     ProjectsRoutingModule
