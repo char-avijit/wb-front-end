@@ -25,6 +25,7 @@ import { TestimonialCardComponent } from './home/testimonial/testimonial-card/te
     TestimonialComponent,
     WorkProcessComponent,
     StepComponent,
+    TestimonialCardComponent,
   ],
     imports: [
         CommonModule,

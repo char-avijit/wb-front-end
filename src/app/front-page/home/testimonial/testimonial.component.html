@@ -1,1 +1,12 @@
-<p>testimonial works!</p>
+<div class="py-[120px]">
+  <div class="container lg:mx-auto mx-3">
+    <ngx-slick-carousel class="carousel"
+                        #slickModal="slick-carousel"
+                        [config]="slickConfig">
+      <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+        <app-testimonial-card></app-testimonial-card>
+      </div>
+    </ngx-slick-carousel>
+
+  </div>
+</div>
