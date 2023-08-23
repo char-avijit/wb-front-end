@@ -1,0 +1,19 @@
+.image-container {
+  position: relative;
+  width: 100%;
+}
+.hero{
+  background-color: rgb(224, 236, 232);
+  background-image: url("../../../../assets/images/building.jpeg");
+  background-size: cover;
+  background-blend-mode: multiply;
+  color: white;
+  padding-top: 400px;
+
+}
+.hero-line {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.534);
+}
