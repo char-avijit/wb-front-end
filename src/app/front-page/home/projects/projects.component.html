@@ -13,20 +13,24 @@
       </div>
       <div class="flex justify-end mt-5 mb-10">
         <div class="flex gap-8">
-          <button mat-fab extended>
-            <mat-icon>home</mat-icon>
+          <button mat-fab extended (click)="slickModal.slickPrev()">
+            <mat-icon>chevron_left</mat-icon>
           </button>
-          <button mat-fab extended>
-            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+          <button mat-fab extended (click)="slickModal.slickNext()">
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="navigate_next"></mat-icon>
           </button>
         </div>
       </div>
 
     </div>
-
+    <ngx-slick-carousel class="carousel"
+                        #slickModal="slick-carousel"
+                        [config]="slickConfig">
+      <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+        <app-product-card [data]='data'></app-product-card>
+      </div>
+    </ngx-slick-carousel>
     <div class="flex gap-6">
-      <app-product-card [data]='data'></app-product-card>
-      <app-product-card [data]='data'></app-product-card>
     </div>
   </div>
 </div>

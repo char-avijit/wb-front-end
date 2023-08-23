@@ -12,6 +12,8 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import { WorkProcessComponent } from './home/work-process/work-process.component';
 import { StepComponent } from './home/work-process/step/step.component';
+import {SlickCarouselModule} from "ngx-slick-carousel";
+import { TestimonialCardComponent } from './home/testimonial/testimonial-card/testimonial-card.component';
 
 
 @NgModule({
@@ -24,15 +26,16 @@ import { StepComponent } from './home/work-process/step/step.component';
     WorkProcessComponent,
     StepComponent,
   ],
-  imports: [
-    CommonModule,
-    FrontPageRoutingModule,
-    AboutUsModule,
-    NgOptimizedImage,
-    ComponentsModule,
-    MatIconModule,
-    MatButtonModule
-  ]
+    imports: [
+        CommonModule,
+        FrontPageRoutingModule,
+        AboutUsModule,
+        NgOptimizedImage,
+        ComponentsModule,
+        MatIconModule,
+        MatButtonModule,
+        SlickCarouselModule
+    ]
 })
 export class FrontPageModule {
 }
