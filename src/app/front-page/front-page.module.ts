@@ -8,6 +8,8 @@ import {AboutUsComponent} from './home/about-us/about-us.component';
 import {TestimonialComponent} from './home/testimonial/testimonial.component';
 import {AboutUsModule} from "./home/about-us/about-us.module";
 import {ComponentsModule} from "../shared/components/components.module";
+import {MatIconModule} from "@angular/material/icon";
+import {MatButtonModule} from "@angular/material/button";
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import {ComponentsModule} from "../shared/components/components.module";
     FrontPageRoutingModule,
     AboutUsModule,
     NgOptimizedImage,
-    ComponentsModule
+    ComponentsModule,
+    MatIconModule,
+    MatButtonModule
   ]
 })
 export class FrontPageModule {
