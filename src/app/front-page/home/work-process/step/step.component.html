@@ -1,0 +1,14 @@
+<div class="flex flex-wrap justify-between">
+  <img *ngIf="!isRightSide" src="{{data.image}}" class="max-h-[268px]">
+  <div class="max-w-[560px] ">
+    <h3 class="text-3xl font-bold">{{data.title}}</h3>
+    <p class="py-8">{{data.description}}</p>
+    <button mat-fab extended>
+      <div class="flex">
+        Read More
+      </div>
+      ->
+    </button>
+  </div>
+  <img *ngIf="isRightSide" src="{{data.image}}" class="max-h-[268px]">
+</div>

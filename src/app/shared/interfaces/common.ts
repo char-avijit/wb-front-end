@@ -5,5 +5,12 @@ export interface ProductCardInput {
   price: number;
   currency: Currency;
   image: string;
-  location:string;
+  location: string;
+}
+
+export interface WorkProcessStepInput {
+  description: string;
+  readMoreLink: string;
+  title: string;
+  image: string;
 }

@@ -10,6 +10,8 @@ import {AboutUsModule} from "./home/about-us/about-us.module";
 import {ComponentsModule} from "../shared/components/components.module";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
+import { WorkProcessComponent } from './home/work-process/work-process.component';
+import { StepComponent } from './home/work-process/step/step.component';
 
 
 @NgModule({
@@ -19,6 +21,8 @@ import {MatButtonModule} from "@angular/material/button";
     ProjectsComponent,
     AboutUsComponent,
     TestimonialComponent,
+    WorkProcessComponent,
+    StepComponent,
   ],
   imports: [
     CommonModule,
