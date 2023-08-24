@@ -5,6 +5,8 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HttpClientModule} from "@angular/common/http";
 import {SlickCarouselModule} from "ngx-slick-carousel";
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import {SlickCarouselModule} from "ngx-slick-carousel";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent]
