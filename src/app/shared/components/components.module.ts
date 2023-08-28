@@ -11,6 +11,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import {RouterOutlet} from "@angular/router";
+import {MatRippleModule} from "@angular/material/core";
 
 
 @NgModule({
@@ -26,15 +27,16 @@ import {RouterOutlet} from "@angular/router";
     ProductCardComponent,
     SubNewsletterComponent,
   ],
-  imports: [
-    CommonModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    FormsModule,
-    MatIconModule,
-    MatButtonModule,
-    RouterOutlet,
-  ]
+    imports: [
+        CommonModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        FormsModule,
+        MatIconModule,
+        MatButtonModule,
+        RouterOutlet,
+        MatRippleModule,
+    ]
 })
 export class ComponentsModule {
 }

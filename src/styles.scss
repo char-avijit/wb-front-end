@@ -1,7 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$wb-front-end-primary: mat.define-palette(mat.$indigo-palette);
+$wb-front-end-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$wb-front-end-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$wb-front-end-theme: mat.define-light-theme((
+  color: (
+    primary: $wb-front-end-primary,
+    accent: $wb-front-end-accent,
+    warn: $wb-front-end-warn,
+  )
+));
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 @font-face {
   font-family: "Poppins";
   src: url("../src/assets/fonts/Poppins-Regular.ttf") format("woff2");
@@ -46,4 +77,14 @@ mat-icon {
     background-color: #E55700;
   }
 
+}
+
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
