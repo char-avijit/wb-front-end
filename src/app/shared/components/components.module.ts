@@ -10,7 +10,7 @@ import {MatButtonModule} from "@angular/material/button";
 import { LayoutComponent } from './layout/layout.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
-import {RouterOutlet} from "@angular/router";
+import {RouterLink, RouterOutlet} from "@angular/router";
 import {MatRippleModule} from "@angular/material/core";
 
 
@@ -36,6 +36,7 @@ import {MatRippleModule} from "@angular/material/core";
         MatButtonModule,
         RouterOutlet,
         MatRippleModule,
+        RouterLink,
     ]
 })
 export class ComponentsModule {
