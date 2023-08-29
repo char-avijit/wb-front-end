@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule, NgOptimizedImage} from '@angular/common';
-import {FrontPageRoutingModule} from './front-page-routing.module';
+import {ClintSideRoutingModule} from './clint-side-routing.module';
 import {HomeComponent} from './home/home.component';
 import {HeroComponent} from './home/hero/hero.component';
 import {ProjectsComponent} from './home/projects/projects.component';
@@ -14,6 +14,7 @@ import { WorkProcessComponent } from './home/work-process/work-process.component
 import { StepComponent } from './home/work-process/step/step.component';
 import {SlickCarouselModule} from "ngx-slick-carousel";
 import { TestimonialCardComponent } from './home/testimonial/testimonial-card/testimonial-card.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -26,10 +27,11 @@ import { TestimonialCardComponent } from './home/testimonial/testimonial-card/te
     WorkProcessComponent,
     StepComponent,
     TestimonialCardComponent,
+    ContactComponent,
   ],
     imports: [
         CommonModule,
-        FrontPageRoutingModule,
+        ClintSideRoutingModule,
         AboutUsModule,
         NgOptimizedImage,
         ComponentsModule,
@@ -38,5 +40,5 @@ import { TestimonialCardComponent } from './home/testimonial/testimonial-card/te
         SlickCarouselModule
     ]
 })
-export class FrontPageModule {
+export class ClintSideModule {
 }

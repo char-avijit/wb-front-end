@@ -5,11 +5,7 @@ import {NotFoundComponent} from "./shared/components/not-found/not-found.compone
 const childrenRoutes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./front-page/front-page.module').then((m) => m.FrontPageModule),
-  },
-  {
-    path: 'projects',
-    loadChildren: () => import('./projects/projects.module').then((m) => m.ProjectsModule),
+    loadChildren: () => import('./clint-side/clint-side.module').then((m) => m.ClintSideModule),
   },
   {
     path: 'wb-admin',
