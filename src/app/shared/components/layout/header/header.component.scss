@@ -1,0 +1,115 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    transition: box-shadow 0.3s ease;
+    z-index: 1000;
+    overflow: hidden; /* Hide the scrollbar */
+    box-sizing: border-box;
+  }
+  
+  .navbar.scrolled {
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar {
+    /* Existing styles for the desktop navbar */
+  }
+  
+  .menu-button {
+    display: none; /* Hide the menu button on desktop */
+  }
+  
+  .mobile-menu {
+    display: none; /* Hide the mobile menu by default */
+    position: fixed;
+    top: 68px; /* Adjust the top position as needed */
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.5s ease; /* Add transition for the transform property */
+    transform: translateY(-100%); 
+  }
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%); /* Start position, above the top */
+    }
+    to {
+      transform: translateY(0); /* End position, slide down to top */
+    }
+  }
+  
+  .mobile-menu.active {
+    display: block; /* Show the mobile menu when active */
+    transform: translateY(0);
+    
+  }
+  .mobile-menu:not(.active) {
+    /* Hide the menu off the screen when not active */
+    transform: translateY(-100%);
+  }
+  
+
+  
+  @media (max-width: 767px) {
+    /* Styles for screens up to 767px (e.g., mobile devices) */
+    .navbar {
+      justify-content: space-between; /* Adjust alignment for mobile */
+    }
+  
+    .contact-button {
+      display: none; /* Hide the contact button on mobile */
+    }
+    .navlink {
+      display: none; /* Hide the contact button on mobile */
+    }
+  
+    .menu-button {
+      display: block; /* Show the menu button on mobile */
+      font-size: 20px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+  
+    .menu-button:hover {
+      /* Add any hover styles for the menu button */
+    }
+  
+    .menu-button:focus {
+      /* Add any focus styles for the menu button */
+    }
+  
+    .menu-button:active {
+      /* Add any active styles for the menu button */
+    }
+  
+    .logo {
+      /* Adjust styles for the logo on mobile if needed */
+    }
+  
+    .mobile-menu {
+      /* Adjust styles for the mobile menu container */
+    }
+  
+    .mobile-menu a {
+      display: block;
+      padding: 10px;
+      color: #333; /* Adjust the color of the menu items */
+      text-decoration: none;
+    }
+  
+    .mobile-menu a:hover {
+      background-color: #f2f2f2; /* Add a background color on hover */
+    }
+  }

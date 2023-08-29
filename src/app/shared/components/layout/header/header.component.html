@@ -1,1 +1,39 @@
-<p>header works!</p>
+<nav class="navbar md:!px-[160px]" [ngClass]="{ scrolled: isScrolled }">
+  <div class="flex gap-20 items-center">
+    <a routerLink="/#" class="hover:cursor-pointer">
+        <svg
+    
+      width="65"
+      height="40"
+      viewBox="0 0 65 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M43.2072 0L32.4211 7.88354L21.626 0L0 15.794V40H12.551V34.6876H5.31243V18.4994L21.626 6.58455L27.9059 11.1713L21.5722 15.794V40H30.1008H36.6853H43.252V15.794L36.9183 11.1713L43.1982 6.58455L59.5118 18.4994V34.6876H51.6909V40H64.8421V15.794L43.2072 0ZM37.9395 18.4994V34.6876H36.6943H30.1097H26.8936V18.4994L32.4121 14.4681L37.9395 18.4994Z"
+        fill="#091638"
+      />
+    </svg>
+    </a>
+    <div class="navlink flex gap-5 text-[#141B2D]">
+      <a href="#">Projects</a>
+      <a href="#">References</a>
+      <a href="#">About us</a>
+<!--      <a href="#">Our team</a>-->
+    </div>
+  </div>
+  <button class="h-[48px] hidden lg:block rounded border bg-[#E55700]  hover:bg-[#582301] hover:shadow-md px-3 text-white" routerLink="/contact-us">CONTACT US</button>
+  <button class="menu-button" (click)="toggleMenu()">
+    <mat-icon>{{ isMenuOpen ? "close" : "menu" }}</mat-icon>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="block lg:hidden ">
+    <div class="mobile-menu" [ngClass]="{ active: isMenuOpen  }">
+        <a href="#">Projects</a>
+        <a href="#">References</a>
+        <a href="#">About us</a>
+      <!--  <a href="#">Our team</a>-->
+      </div>
+</div>

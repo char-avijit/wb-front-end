@@ -2,22 +2,22 @@
   <div class="container lg:mx-auto mx-3">
     <div>
       <h3 class="text-[52px] font-bold pb-2">Our Recent Projects</h3>
-      <div class="flex justify-between">
-        <p>Fulfill your career dreams, enjoy all the achievements of the city center and luxury housing to the
+      <div class="flex justify-between flex-wrap gap-6">
+        <p class="max-w-sm lg:max-w-full">Fulfill your career dreams, enjoy all the achievements of the city center and luxury housing to the
           fullest.</p>
         <div>
-          <button mat-fab extended>
-            Home
+          <button class="h-[48px] rounded border border-[#E55700] hover:bg-[#e558002c] hover:shadow-md">
+            <p class="text-[#E55700] mx-3">Show all offers</p>
           </button>
         </div>
       </div>
-      <div class="flex justify-end mt-5 mb-10">
+      <div class="flex justify-center lg:justify-end mt-5 mb-10">
         <div class="flex gap-8">
-          <button mat-fab extended (click)="slickModal.slickPrev()">
-            <mat-icon>chevron_left</mat-icon>
+          <button class="h-[48px] rounded-full border bg-[#E55700]  hover:bg-[#c24b01] hover:shadow-md px-3 text-white" (click)="slickModal.slickPrev()">
+            <mat-icon class="text-xl">chevron_left</mat-icon>
           </button>
-          <button mat-fab extended (click)="slickModal.slickNext()">
-            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="navigate_next"></mat-icon>
+          <button class="h-[48px] rounded-full border bg-[#E55700]  hover:bg-[#c24b01] hover:shadow-md px-3 text-white" (click)="slickModal.slickNext()">
+            <mat-icon class="text-xl">navigate_next</mat-icon>
           </button>
         </div>
       </div>
