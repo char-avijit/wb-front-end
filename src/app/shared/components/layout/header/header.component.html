@@ -1,7 +1,7 @@
-<nav class="navbar  " [ngClass]="{ scrolled: isScrolled }">
+<nav class="navbar " [ngClass]="{ scrolled: isScrolled }" >
   <div class="flex justify-between container mx-3 lg:mx-auto">
     <div class="flex gap-20 items-center ">
-      <a routerLink="/#" class="hover:cursor-pointer">
+      <a routerLink="/" class="hover:cursor-pointer">
         <svg
 
           width="65"
@@ -17,7 +17,7 @@
         </svg>
       </a>
       <div class="navlink flex gap-5 text-[#141B2D]">
-        <a href="#">Projects</a>
+        <a routerLink="/projects">Projects</a>
         <a href="#">References</a>
         <a href="#">About us</a>
         <!--      <a href="#">Our team</a>-->
@@ -42,6 +42,7 @@
     <!--  <a href="#">Our team</a>-->
   </div>
 </div>
+<br>
 <br>
 <br>
 <br>
