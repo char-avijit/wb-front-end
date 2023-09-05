@@ -16,6 +16,7 @@ import {SlickCarouselModule} from "ngx-slick-carousel";
 import {TestimonialCardComponent} from './home/testimonial/testimonial-card/testimonial-card.component';
 import {ContactComponent} from './contact/contact.component';
 import {MatTabsModule} from "@angular/material/tabs";
+import { ProjectComponent } from './project/project.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import {MatTabsModule} from "@angular/material/tabs";
     StepComponent,
     TestimonialCardComponent,
     ContactComponent,
+    ProjectComponent,
   ],
   imports: [
     CommonModule,

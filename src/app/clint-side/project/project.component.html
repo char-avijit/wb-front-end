@@ -1,0 +1,24 @@
+<div class="container mx-auto ">
+  <h1 class="text-[52px] font-bold mb-[40px]">Premium penthouse in central Barcelona with panoramic views</h1>
+  <div class="relative">
+
+    <ngx-slick-carousel class="carousel w-full "
+                        #slickModal="slick-carousel"
+                        [config]="slickConfigddd">
+      <div ngxSlickItem *ngFor="let slide of slides">
+        <div (click)="setActiveImg(slide.img)" class="cursor-pointer"><img class="w-full" src="{{slide.img}}"></div>
+      </div>
+    </ngx-slick-carousel>
+    <button
+      class="h-[44px] w-[44px] absolute top-1/2 left-2 rounded-full border bg-[#E55700]  hover:bg-[#c24b01] hover:shadow-md px-3 text-white flex justify-center items-center"
+      (click)="slickModal.slickPrev()">
+      <mat-icon class="">chevron_left</mat-icon>
+    </button>
+    <button
+      class="h-[44px] w-[44px] absolute top-1/2 right-2  rounded-full border bg-[#E55700]  hover:bg-[#c24b01] hover:shadow-md px-3 text-white flex justify-center items-center"
+      (click)="slickModal.slickNext()">
+      <mat-icon class="">navigate_next</mat-icon>
+    </button>
+  </div>
+  <br>
+</div>

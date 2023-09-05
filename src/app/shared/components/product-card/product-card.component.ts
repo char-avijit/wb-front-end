@@ -8,4 +8,5 @@ import {ProductCardInput} from "../../interfaces/common";
 })
 export class ProductCardComponent {
   @Input() data!: ProductCardInput;
+  @Input() slug?: string;
 }

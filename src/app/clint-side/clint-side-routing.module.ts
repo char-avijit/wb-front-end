@@ -4,6 +4,7 @@ import {HomeComponent} from "./home/home.component";
 import {LayoutComponent} from "../shared/components/layout/layout.component";
 import {ProjectsComponent} from "./projects/projects.component";
 import {ContactComponent} from "./contact/contact.component";
+import {ProjectComponent} from "./project/project.component";
 
 const childrenRoutes: Routes = [
   {
@@ -17,6 +18,11 @@ const childrenRoutes: Routes = [
   {
     path: 'contact-us',
     component: ContactComponent,
+  },
+  {
+    path: ':project-slug',
+    component: ProjectComponent,
+
   },
 ];
 const routes: Routes = [

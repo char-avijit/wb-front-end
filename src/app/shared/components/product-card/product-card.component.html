@@ -1,8 +1,11 @@
-<div class= "product-card lg:max-w-[350px] lg:max-h-[420px] max-w-[200px] max-h-[300px]">
-  <img src="{{data.image}}" alt="" class="rounded-t-[4px]">
-  <div class="p-[20px]">
-    <h2 class="text-[21px] font-bold mb-5 overflow-ellipsis line-clamp-2">{{data.title}}</h2>
-    <p class="text-[17px] font-semibold text-orange-300">{{data.price}}{{data.currency}}</p>
-    <p>{{data.location}}</p>
+<div [className]="slug?'cursor-pointer':''">
+  <div class="product-card lg:max-w-[350px] lg:max-h-[420px] max-w-[200px] max-h-[300px]"
+       [routerLink]="(slug? slug:null)" mat-ripple>
+    <img src="{{data.image}}" alt="" class="rounded-t-[4px]">
+    <div class="p-[20px]">
+      <h2 class="text-[21px] font-bold mb-5 overflow-ellipsis line-clamp-2">{{data.title}}</h2>
+      <p class="text-[17px] font-semibold text-orange-300">{{data.price}}{{data.currency}}</p>
+      <p>{{data.location}}</p>
+    </div>
   </div>
 </div>
