@@ -20,7 +20,7 @@ const childrenRoutes: Routes = [
     component: ContactComponent,
   },
   {
-    path: ':project-slug',
+    path: 'p/:project-slug',
     component: ProjectComponent,
 
   },
