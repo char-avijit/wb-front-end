@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
   });
 
   async loginNow(): Promise<void> {
-    console.log('sdfsd');
+   this.isLoading.set(true)
     const res = await this.authService.login({
       username: this.loginForm.value.username,
       password: this.loginForm.value.password
@@ -40,9 +40,12 @@ export class LoginComponent implements OnInit {
     res.subscribe((value) => {
       this.tokenService.saveAccessToken(value.access_token);
       this.router.navigate(['wb-admin/dashboard']);
+      this.isLoading.set(false)
     },error => {
       console.log(error);
+      this.isLoading.set(false)
     });
+
   }
 
 }

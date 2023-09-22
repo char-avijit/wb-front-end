@@ -5,7 +5,7 @@ import {Router} from '@angular/router';
 import {AuthService} from "../service/auth.service";
 import {TokenService} from "../service/token.service";
 
-const TOKEN_HEADER_KEY = 'x-access-token';
+const TOKEN_HEADER_KEY = 'Authorization';
 
 @Injectable()
 export class ApiCallInterceptor implements HttpInterceptor {
@@ -71,7 +71,7 @@ export class ApiCallInterceptor implements HttpInterceptor {
   }*/
 
   private addTokenHeader(request: HttpRequest<any>, token: string) {
-    return request.clone({headers: request.headers.set(TOKEN_HEADER_KEY, token)});
+    return request.clone({headers: request.headers.set(TOKEN_HEADER_KEY, `Bearer ${token}`)});
   }
 
   private setContentType(request: HttpRequest<any>) {

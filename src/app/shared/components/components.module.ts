@@ -12,6 +12,12 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import {RouterLink, RouterOutlet} from "@angular/router";
 import {MatRippleModule} from "@angular/material/core";
+import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {NzLayoutModule} from "ng-zorro-antd/layout";
+import {NzBreadCrumbModule} from "ng-zorro-antd/breadcrumb";
+import {NzMenuModule} from "ng-zorro-antd/menu";
+import {NzIconModule} from "ng-zorro-antd/icon";
 
 
 @NgModule({
@@ -21,23 +27,29 @@ import {MatRippleModule} from "@angular/material/core";
     SubNewsletterComponent,
     LayoutComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AdminLayoutComponent
   ],
   exports: [
     ProductCardComponent,
     SubNewsletterComponent,
   ],
-    imports: [
-        CommonModule,
-        MatInputModule,
-        ReactiveFormsModule,
-        FormsModule,
-        MatIconModule,
-        MatButtonModule,
-        RouterOutlet,
-        MatRippleModule,
-        RouterLink,
-    ]
+  imports: [
+    CommonModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatIconModule,
+    MatButtonModule,
+    RouterOutlet,
+    MatRippleModule,
+    RouterLink,
+    MatSidenavModule,
+    NzLayoutModule,
+    NzBreadCrumbModule,
+    NzMenuModule,
+    NzIconModule,
+  ]
 })
 export class ComponentsModule {
 }

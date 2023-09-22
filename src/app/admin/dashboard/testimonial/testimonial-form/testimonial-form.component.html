@@ -1,0 +1,43 @@
+<nz-drawer
+  [nzBodyStyle]="{ overflow: 'auto' }"
+  [nzMaskClosable]="false"
+  [nzWidth]="720"
+  [nzVisible]="testimonialService.isVisibleForm()"
+  nzTitle="Create"
+  [nzFooter]="footerTpl"
+  (nzOnClose)="testimonialService.closeForm()"
+>
+  <form nz-form *nzDrawerContent>
+    <div nz-row [nzGutter]="8">
+      <div nz-col nzSpan="12">
+        <nz-form-item>
+          <nz-form-label>Name</nz-form-label>
+          <nz-form-control>
+            <input nz-input placeholder="please enter user name" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+    <div nz-row [nzGutter]="8">
+      <div nz-col nzSpan="24">
+        <nz-form-item>
+          <nz-form-label>Description</nz-form-label>
+          <nz-form-control>
+                <textarea
+                  nz-input
+                  placeholder="please enter url description"
+                  [nzAutosize]="{ minRows: 4, maxRows: 4 }"
+                ></textarea>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+  </form>
+
+  <ng-template #footerTpl>
+    <div style="float: right">
+      <button nz-button style="margin-right: 8px;" (click)="testimonialService.closeForm()">Cancel</button>
+      <button nz-button nzType="primary" (click)="testimonialService.closeForm()">Submit</button>
+    </div>
+  </ng-template>
+</nz-drawer>
