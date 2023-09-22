@@ -34,9 +34,4 @@ export class TokenService {
   removeRefreshToken(): void {
     localStorage.removeItem(REFRESH_TOKEN);
   }
-
-  signOut() {
-    this.removeAccessToken();
-    return inject(Router).createUrlTree(["/wb-admin",]);
-  }
 }

@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest,} from '@angular/common/http';
-import {BehaviorSubject, catchError, Observable, throwError} from 'rxjs';
+import {catchError, Observable, throwError} from 'rxjs';
 import {Router} from '@angular/router';
 import {AuthService} from "../service/auth.service";
 import {TokenService} from "../service/token.service";
@@ -9,9 +9,11 @@ const TOKEN_HEADER_KEY = 'x-access-token';
 
 @Injectable()
 export class ApiCallInterceptor implements HttpInterceptor {
-  private isRefreshing = false;
-  private refreshTokenSubject: BehaviorSubject<any> = new BehaviorSubject<any>(null);
+  /*
+    private isRefreshing = false;
+    private refreshTokenSubject: BehaviorSubject<any> = new BehaviorSubject<any>(null);
 
+  */
 
   constructor(
     private router: Router,
@@ -25,17 +27,16 @@ export class ApiCallInterceptor implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<unknown>> {
     const accessToken = this.tokenService.getAccessToken();
-    const refreshToken = this.tokenService.getRefreshToken();
-    let authReq = request;
+    let authReq = this.setContentType(request);
     if (accessToken != null) {
       authReq = this.addTokenHeader(request, accessToken);
     }
 
     return next.handle(authReq).pipe(catchError(error => {
       if (error instanceof HttpErrorResponse && !authReq.url.includes('wb-admin/login') && error.status === 401) {
-        this.tokenService.signOut();
-        return throwError(error);
+        this.authService.signOut();
         //return this.handle401Error(authReq, next);
+        return throwError(() => new Error(error.message));
       }
 
       return throwError(error);
@@ -71,5 +72,9 @@ export class ApiCallInterceptor implements HttpInterceptor {
 
   private addTokenHeader(request: HttpRequest<any>, token: string) {
     return request.clone({headers: request.headers.set(TOKEN_HEADER_KEY, token)});
+  }
+
+  private setContentType(request: HttpRequest<any>) {
+    return request.clone({headers: request.headers.set('Content-Type', 'application/json')});
   }
 }

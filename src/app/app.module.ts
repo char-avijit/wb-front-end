@@ -20,9 +20,8 @@ import {MatTabsModule} from "@angular/material/tabs";
     HttpClientModule,
     SlickCarouselModule,
     ReactiveFormsModule,
-    FormsModule,
     BrowserAnimationsModule,
-
+    FormsModule,
   ],
   providers: [provideClientHydration(),Meta],
   bootstrap: [AppComponent]

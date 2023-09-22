@@ -8,5 +8,5 @@ export const authGuard: CanActivateFn = (route, state) => {
   if (oauthService.isAuthenticated()) {
     return true;
   }
-  return inject(Router).createUrlTree(["/wb-admin",]);
+  return inject(Router).createUrlTree(["wb-admin",]);
 };
