@@ -9,7 +9,7 @@ const childrenRoutes: Routes = [
   },
   {
     path: 'wb-admin',
-    loadChildren: () => import('./admin-auth/admin-auth.module').then((m) => m.AdminAuthModule),
+    loadChildren: () => import('./admin/admin.module').then((m) => m.AdminModule),
   }
 ];
 
