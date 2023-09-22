@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import {inject, Injectable} from '@angular/core';
+import {Router} from "@angular/router";
 
 const ACCESS_TOKEN = 'access_token';
 const REFRESH_TOKEN = 'refresh_token';
@@ -7,7 +8,8 @@ const REFRESH_TOKEN = 'refresh_token';
   providedIn: 'root',
 })
 export class TokenService {
-  constructor() {}
+  constructor() {
+  }
 
   getAccessToken(): string | null {
     return localStorage.getItem(ACCESS_TOKEN);
@@ -31,5 +33,10 @@ export class TokenService {
 
   removeRefreshToken(): void {
     localStorage.removeItem(REFRESH_TOKEN);
+  }
+
+  signOut() {
+    this.removeAccessToken();
+    return inject(Router).createUrlTree(["/wb-admin",]);
   }
 }
