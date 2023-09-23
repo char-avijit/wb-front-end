@@ -8,6 +8,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatTableModule} from "@angular/material/table";
+import {BrowserModule} from "@angular/platform-browser";
 
 
 @NgModule({
@@ -22,7 +23,7 @@ import {MatTableModule} from "@angular/material/table";
     ReactiveFormsModule,
     MatSidenavModule,
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule,
   ]
 })
 export class AdminModule { }

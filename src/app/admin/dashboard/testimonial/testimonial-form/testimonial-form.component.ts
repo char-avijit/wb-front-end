@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {AdminTestimonialService} from "../admin-testimonial.service";
+import {NzMessageService} from "ng-zorro-antd/message";
+import {FormBuilder, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-testimonial-form',
@@ -7,15 +9,8 @@ import {AdminTestimonialService} from "../admin-testimonial.service";
   styleUrls: ['./testimonial-form.component.scss']
 })
 export class TestimonialFormComponent {
-  constructor(public testimonialService: AdminTestimonialService) {
-    console.log(this.testimonialService.isVisibleForm());
-  }
-  visible = this.testimonialService.isVisibleForm();
-  open(): void {
-    this.visible = true;
+  constructor(public testimonialService: AdminTestimonialService, private msg: NzMessageService,) {
   }
 
-  close(): void {
-    this.visible = false;
-  }
+
 }

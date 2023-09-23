@@ -11,10 +11,13 @@ import {MatTableModule} from "@angular/material/table";
 import {ApiCallInterceptor} from "./shared/interceptors/http.interceptor";
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
-import { registerLocaleData } from '@angular/common';
+import {CommonModule, registerLocaleData} from '@angular/common';
 import en from '@angular/common/locales/en';
+import {NzIconModule} from "ng-zorro-antd/icon";
+import {NzUploadModule} from "ng-zorro-antd/upload";
 
 registerLocaleData(en);
+
 
 
 @NgModule({
@@ -29,7 +32,9 @@ registerLocaleData(en);
     ReactiveFormsModule,
     BrowserAnimationsModule,
     FormsModule,
-    MatTableModule
+    MatTableModule,
+    NzUploadModule,
+    CommonModule
   ],
 
   providers: [provideClientHydration(), Meta, {

@@ -4,6 +4,16 @@ export interface Testimonial {
   name: string;
   designation: string;
   avatar: string;
+  avatarImageKey: string;
+}
+
+
+export interface TestimonialBody {
+  message: string;
+  name: string;
+  designation: string;
+  avatar: string;
+  avatarImageKey: string;
 }
 
 export interface Testimonials {
