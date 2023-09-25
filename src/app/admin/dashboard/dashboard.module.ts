@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 
 import {DashboardRoutingModule} from './dashboard-routing.module';
 import {TestimonialComponent} from "./testimonial/testimonial.component";
@@ -44,6 +44,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     NzIconModule,
     FormsModule,
     ReactiveFormsModule,
+    NgOptimizedImage,
 
   ]
 })

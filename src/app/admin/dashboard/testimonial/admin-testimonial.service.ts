@@ -80,7 +80,7 @@ export class AdminTestimonialService {
 
   beforeUpload(file: NzUploadFile, _fileList: NzUploadFile[]): Observable<boolean> {
     return new Observable((observer: Observer<boolean>) => {
-      const isJpgOrPng = file.type === 'image/jpeg' || file.type === 'image/png' || file.type === "image/svg+xml";
+      const isJpgOrPng = file.type === 'image/jpeg' || file.type === 'image/png';
       if (!isJpgOrPng) {
         this.msg.error('You can only upload JPG file!');
         observer.complete();
@@ -160,7 +160,7 @@ export class AdminTestimonialService {
       message: this.testimonialForm.value.message ?? '',
       name: this.testimonialForm.value.name ?? '',
       designation: this.testimonialForm.value.designation ?? '',
-      avatar: this.avatarUrl() ?? '',
+      avatar: this.avatarUrlKey() ?? '',
       avatarImageKey: this.avatarUrlKey() ?? ''
     };
 
@@ -189,7 +189,7 @@ export class AdminTestimonialService {
       message: this.testimonialForm.value.message ?? '',
       name: this.testimonialForm.value.name ?? '',
       designation: this.testimonialForm.value.designation ?? '',
-      avatar: this.avatarUrl() ?? '',
+      avatar: this.avatarUrlKey() ?? '',
       avatarImageKey: this.avatarUrlKey() ?? ''
     };
     const res = this.http
@@ -211,4 +211,21 @@ export class AdminTestimonialService {
     return res;
   }
 
+  deleteTestimonial(id: number) {
+    const res = this.http
+      .delete(BASE_URL + SERVICE_URL + '/' + id,)
+      .pipe(
+        tap((res: any) => {
+          return res;
+        }),
+        catchError((err, caught) => {
+          return throwError(() => new Error(err.error.message));
+        })
+      );
+
+    res.subscribe(value => {
+      this.getTestimonials({pageNo: this.activePage(), limitPerPage: 10}).then(r => {
+      });
+    });
+  }
 }
