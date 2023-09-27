@@ -19,13 +19,19 @@ import {NzUploadModule} from "ng-zorro-antd/upload";
 import {BrowserModule} from "@angular/platform-browser";
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { ShowcaseComponent } from './showcase/showcase.component';
+import { ShowcaseFormComponent } from './showcase/showcase-form/showcase-form.component';
+import { ShowcaseDataComponent } from './showcase/showcase-data/showcase-data.component';
 
 
 @NgModule({
   declarations: [
     TestimonialComponent,
     DataTableComponent,
-    TestimonialFormComponent
+    TestimonialFormComponent,
+    ShowcaseComponent,
+    ShowcaseFormComponent,
+    ShowcaseDataComponent
   ],
   imports: [
     CommonModule,

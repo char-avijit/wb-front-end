@@ -30,10 +30,11 @@ import {NzIconModule} from "ng-zorro-antd/icon";
     FooterComponent,
     AdminLayoutComponent
   ],
-  exports: [
-    ProductCardComponent,
-    SubNewsletterComponent,
-  ],
+    exports: [
+        ProductCardComponent,
+        SubNewsletterComponent,
+        FooterComponent,
+    ],
   imports: [
     CommonModule,
     MatInputModule,

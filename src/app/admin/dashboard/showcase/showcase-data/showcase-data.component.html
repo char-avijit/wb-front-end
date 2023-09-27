@@ -1,0 +1,22 @@
+<nz-table #basicTable [nzData]="adminShowcaseService.showCases()" [nzFrontPagination]="false"
+          [nzTotal]="adminShowcaseService.totalShowcase()"
+          [nzLoading]="adminShowcaseService.isLoading()" (nzPageIndexChange)="adminShowcaseService.paginateTo($event)">
+  <thead>
+  <tr>
+    <th>No.</th>
+    <th>ID</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let data of basicTable.data">
+    <td>{{ adminShowcaseService.showCases().indexOf(data) }}</td>
+    <td>{{ data.id }}</td>
+    <td>
+      <a (click)="adminShowcaseService.openForm(data)">Edit</a>
+      <nz-divider nzType="vertical"></nz-divider>
+      <a (click)="adminShowcaseService.deleteTestimonial(data.id)" class="text-red-500">Delete</a>
+    </td>
+  </tr>
+  </tbody>
+</nz-table>

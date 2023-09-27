@@ -1,0 +1,81 @@
+<nz-drawer
+  [nzBodyStyle]="{ overflow: 'auto' }"
+  [nzMaskClosable]="false"
+  [nzWidth]="720"
+  [nzVisible]="adminShowcaseService.isVisibleForm()"
+  nzTitle="Create"
+  [nzKeyboard]="false"
+  (nzOnClose)="adminShowcaseService.closeForm()"
+>
+
+  <form nz-form *nzDrawerContent
+        >
+    <div nz-row [nzGutter]="8">
+      <div nz-col nzSpan="12">
+        <nz-form-item>
+          <nz-form-label>Name</nz-form-label>
+          <nz-form-control nzErrorTip="Please input name!">
+            <nz-form-control>
+              <input nz-input formControlName="name" placeholder="name" />
+            </nz-form-control>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+    <div nz-row [nzGutter]="8">
+      <div nz-col nzSpan="12">
+        <nz-form-item>
+          <nz-form-label>Designation</nz-form-label>
+          <nz-form-control nzErrorTip="Please input designation!">
+            <nz-form-control>
+              <input nz-input formControlName="designation" placeholder="designation" />
+            </nz-form-control>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+
+    <div nz-row [nzGutter]="8">
+      <div nz-col nzSpan="24">
+        <nz-form-item>
+          <nz-form-label>Message</nz-form-label>
+          <nz-form-control nzErrorTip="Please input message!">
+            <nz-form-control>
+                 <textarea
+                   nz-input
+                   formControlName="message"
+                   placeholder="message"
+                   [nzAutosize]="{ minRows: 4, maxRows: 4 }"
+                 ></textarea>
+            </nz-form-control>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+    <nz-form-item>
+      <nz-form-label>Image</nz-form-label>
+      <nz-form-control nzErrorTip="Please input message!">
+        <nz-form-control>
+          <nz-upload
+            class="avatar-uploader"
+            nzAction="http://localhost:3000/file"
+            nzName="file"
+            nzListType="picture-card"
+            [nzShowUploadList]="true"
+          >
+            <ng-container >
+              <span class="upload-icon" nz-icon [nzType]="adminShowcaseService.loading() ? 'loading' : 'plus'"></span>
+            </ng-container>
+            <img  [src]="" style="width: 100%"/>
+          </nz-upload>
+        </nz-form-control>
+      </nz-form-control>
+    </nz-form-item>
+    <div style="float: right">
+      <button nz-button style="margin-right: 8px;" (click)="adminShowcaseService.closeForm()">Cancel</button>
+      <button nz-button nzType="primary"
+      >{{adminShowcaseService.editTestimonialData() ? 'Update' : "Create"}}</button>
+    </div>
+  </form>
+
+</nz-drawer>

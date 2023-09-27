@@ -2,6 +2,7 @@ import {ShowCaseMetaData} from "./show-case-meta-data";
 import {Category} from "./category";
 import {ShowCaseImage} from "./show-case-image";
 import {AreaUnit, Currency, PropertyType} from "../enums";
+import {Testimonial} from "./testimonial";
 
 export interface ShowCase {
   id: number;
@@ -19,4 +20,10 @@ export interface ShowCase {
   images?: ShowCaseImage[];
   metadata?: ShowCaseMetaData;
   showCaseCategory?: Category;
+}
+
+export interface ShowCases {
+  count: number;
+  results: ShowCase[];
+
 }
