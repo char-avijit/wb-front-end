@@ -12,5 +12,5 @@ import {environment} from "../../../../../environments/environment";
 export class TestimonialFormComponent {
   constructor(public testimonialService: AdminTestimonialService, private msg: NzMessageService,) {
   }
-  fileUploadApi = `${environment.apiUrl}/file`
+  fileUploadApi = `${environment.apiUrl}file`
 }
