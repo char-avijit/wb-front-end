@@ -4,14 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build-dev": "ng build",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "dev:ssr": "ng run wb-front-end:serve-ssr",
     "serve:ssr": "node dist/wb-front-end/server/main.js",
     "build:ssr": "ng build && ng run wb-front-end:server",
-    "prerender": "ng run wb-front-end:prerender",
-    "vercel-build": "npm run build:ssr"
+    "prerender": "ng run wb-front-end:prerender"
   },
   "private": true,
   "dependencies": {
