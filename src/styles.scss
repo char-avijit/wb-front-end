@@ -33,10 +33,10 @@ $wb-front-end-theme: mat.define-light-theme((
 @tailwind utilities;
 
 
-@font-face {
-  font-family: "Poppins";
-  src: url("../src/assets/fonts/Poppins-Regular.ttf") format("woff2");
-}
+// @font-face {
+//   font-family: "Poppins";
+//   src: url("../src/assets/fonts/Poppins-Regular.ttf") format("woff2");
+// }
 
 * {
   font-family: "Poppins", sans-serif;

@@ -18,8 +18,6 @@ import {NzUploadModule} from "ng-zorro-antd/upload";
 
 registerLocaleData(en);
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
