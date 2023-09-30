@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {DashboardComponent} from "./dashboard.component";
 import {TestimonialComponent} from "./testimonial/testimonial.component";
 import {ShowcaseComponent} from "./showcase/showcase.component";
+import {SubscribersComponent} from "./subscribers/subscribers.component";
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'showcase',
     component: ShowcaseComponent
+  },
+  {
+    path: 'subscribers',
+    component: SubscribersComponent
   },
 ];
 

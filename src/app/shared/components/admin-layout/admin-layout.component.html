@@ -2,22 +2,17 @@
   <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
     <div class="logo">welcome</div>
     <ul nz-menu nzTheme="dark"  nzMode="inline">
-      <li nz-submenu nzTitle="User" nzIcon="user">
-        <ul>
-          <li nz-menu-item>Tom</li>
-          <li nz-menu-item>Bill</li>
-          <li nz-menu-item>Alex</li>
-        </ul>
-      </li>
-      <li nz-submenu nzTitle="Team" nzIcon="team">
-        <ul>
-          <li nz-menu-item>Team 1</li>
-          <li nz-menu-item>Team 2</li>
-        </ul>
-      </li>
-      <li nz-menu-item>
+      <li nz-menu-item routerLink="testimonial">
         <span nz-icon nzType="file"></span>
-        <span>File</span>
+        <span>Testimonials</span>
+      </li>
+      <li nz-menu-item routerLink="showcase">
+        <span nz-icon nzType="file"></span>
+        <span>Showcase</span>
+      </li>
+      <li nz-menu-item routerLink="subscribers">
+        <span nz-icon nzType="file"></span>
+        <span>Subscribers</span>
       </li>
     </ul>
   </nz-sider>
@@ -31,10 +26,7 @@
           ></span>
     </nz-header>
     <nz-content>
-      <nz-breadcrumb>
-        <nz-breadcrumb-item>User</nz-breadcrumb-item>
-        <nz-breadcrumb-item>Bill</nz-breadcrumb-item>
-      </nz-breadcrumb>
+      <br>
       <div class="inner-content"><router-outlet></router-outlet></div>
     </nz-content>
     <nz-footer>Ant Design ©2020 Implement By Angular</nz-footer>

@@ -53,7 +53,21 @@ export class AdminShowcaseService {
   }
 
   deleteTestimonial(id: number) {
+    const res = this.http
+      .delete(BASE_URL + SERVICE_URL + '/' + id,)
+      .pipe(
+        tap((res: any) => {
+          return res;
+        }),
+        catchError((err, caught) => {
+          return throwError(() => new Error(err.error.message));
+        })
+      );
 
+    res.subscribe(value => {
+      this.getShowCases({pageNo: this.activePage(), limitPerPage: 10}).then(r => {
+      });
+    });
   }
 
 

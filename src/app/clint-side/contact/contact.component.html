@@ -1,2 +1,80 @@
-<p>contact works!</p>
+<div class="contactbg">
+  <div class="container md:mx-auto mx-3 pt-[77px] pb-[124px]">
+    <div class="flex items-center">
+      <div>
+        <h1 class="font-bold text-[56px] mb-[24px]">Have a project idea!
+          Drop me a line.</h1>
+        <h2 class="text-[18px] font-[300] mb-[48px]">Aenean vestibulum felis nec egestas fringilla. Duis non felis
+          consequat, varius sapien convallis, tincidunt nisl. </h2>
+
+        <div class="flex gap-6 mb-[48px]">
+          <div>
+            <div class="h-[32px] w-[32px] rounded-full bg-[#FF7A00]">
+            </div>
+          </div>
+          <div>
+            <h3>
+              Email us
+            </h3>
+            <h2>
+              info@golio.com
+            </h2>
+          </div>
+        </div>
+        <h4 class="mb-[16px]">Connect with us:</h4>
+        <div class="flex gap-3">
+          <div class="h-[44px] w-[44px]  bg-[#FF7A00] rounded">
+
+          </div>
+
+          <div class="h-[44px] w-[44px]  bg-[#FF7A00] rounded">
+
+          </div>
+
+          <div class="h-[44px] w-[44px]  bg-[#FF7A00] rounded">
+
+          </div>
+          <div class="h-[44px] w-[44px]  bg-[#FF7A00] rounded">
+
+          </div>
+        </div>
+      </div>
+
+      <div class=" bg-white  rounded-[24px] p-[48px] drop-shadow">
+        <p class="text-[24px] font-semibold mb-[16px]">Request A Quote — let’s work together.</p>
+        <p class="mb-[24px]">Got a project? Drop me a line if you want to work together on something exciting. Or do you
+          need our help?
+          Feel free to contact us.</p>
+        <form [formGroup]="sendEmailForm()" (ngSubmit)="sendEmail()">
+
+          <div class="flex gap-6">
+            <div class="w-full">
+              <p class="py-3">Name</p>
+              <input formControlName="name" type="text">
+            </div>
+            <div class="w-full">
+              <p class="py-3">Name</p>
+              <input formControlName="email" type="text">
+            </div>
+          </div>
+
+          <div class="w-full">
+            <p class="py-3">Name</p>
+            <input formControlName="subject" type="text">
+          </div>
+
+          <div class="w-full">
+            <p class="py-3">Name</p>
+            <textarea formControlName="message">
+          </textarea>
+          </div>
+          <button type="submit"
+                  class="mt-[24px] h-[48px] hidden lg:block rounded border bg-[#E55700]  hover:bg-[#582301] hover:shadow-md px-3 text-white">
+            Request a quote
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 <app-footer/>

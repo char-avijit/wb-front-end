@@ -22,6 +22,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ShowcaseComponent } from './showcase/showcase.component';
 import { ShowcaseFormComponent } from './showcase/showcase-form/showcase-form.component';
 import { ShowcaseDataComponent } from './showcase/showcase-data/showcase-data.component';
+import { SubscribersComponent } from './subscribers/subscribers.component';
+import { CategoryComponent } from './category/category.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { ShowcaseDataComponent } from './showcase/showcase-data/showcase-data.co
     TestimonialFormComponent,
     ShowcaseComponent,
     ShowcaseFormComponent,
-    ShowcaseDataComponent
+    ShowcaseDataComponent,
+    SubscribersComponent,
+    CategoryComponent
   ],
   imports: [
     CommonModule,

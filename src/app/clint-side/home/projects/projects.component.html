@@ -27,7 +27,9 @@
                         #slickModal="slick-carousel"
                         [config]="slickConfig">
       <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-        <app-product-card [data]='data' slug="sdfsdf"></app-product-card>
+        <a routerLink="p/sddf">
+          <app-product-card [data]='data'></app-product-card>
+        </a>
       </div>
     </ngx-slick-carousel>
     <div class="flex gap-6">

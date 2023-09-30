@@ -17,6 +17,7 @@ import {TestimonialCardComponent} from './home/testimonial/testimonial-card/test
 import {ContactComponent} from './contact/contact.component';
 import {MatTabsModule} from "@angular/material/tabs";
 import { ProjectComponent } from './project/project.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -41,7 +42,9 @@ import { ProjectComponent } from './project/project.component';
     MatIconModule,
     MatButtonModule,
     SlickCarouselModule,
-    MatTabsModule
+    MatTabsModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class ClintSideModule {

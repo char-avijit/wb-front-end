@@ -1,0 +1,23 @@
+<nz-table #basicTable [nzData]="subscribers()" [nzFrontPagination]="false"
+          [nzTotal]="totalSubscribers()"
+          [nzLoading]="isLoading()" (nzPageIndexChange)="paginateTo($event)">
+  <thead>
+  <tr>
+    <th>No.</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Phone</th>
+    <th>Email</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let data of basicTable.data">
+    <td>{{subscribers().indexOf(data) }}</td>
+    <td>{{ data.name }}</td>
+    <td>{{ data.address }}</td>
+    <td>{{ data.phone }}</td>
+    <td>{{ data.email }}</td>
+  </tr>
+  </tbody>
+</nz-table>
+

@@ -5,9 +5,9 @@
       <div class="space-y-3">
         <h4 class="text-4xl font-bold"> Subscribe to newsletter </h4>
         <p>Get the latest news and interesting offers and real estate</p>
-        <form class="example-form">
+        <form class="example-form"  (ngSubmit)="sendEmail()">
           <div class="flex gap-6 flex-wrap">
-            <input type="text">
+            <input [formControl]="emailFormControl" type="text">
             <button class="h-[48px] w-[117px] rounded border border-[#E55700]  hover:bg-[#e558002c] hover:shadow-md">
               <p class="text-[#E55700] mx-3">Subscribe</p>
             </button>
