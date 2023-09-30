@@ -3,7 +3,7 @@
   [nzMaskClosable]="false"
   [nzWidth]="720"
   [nzVisible]="testimonialService.isVisibleForm()"
-  nzTitle="Create"
+  [nzTitle]="testimonialService.editTestimonialData()? 'Update': 'Create'"
   [nzKeyboard]="false"
   (nzOnClose)="testimonialService.closeForm()"
 >
@@ -16,7 +16,8 @@
           <nz-form-label>Name</nz-form-label>
           <nz-form-control nzErrorTip="Please input name!">
             <nz-form-control>
-              <input nz-input formControlName="name" placeholder="name" [ngModel]="testimonialService.editTestimonialData()?.name ?? ''"/>
+              <input nz-input formControlName="name" placeholder="name"
+                     [ngModel]="testimonialService.editTestimonialData()?.name ?? ''"/>
             </nz-form-control>
           </nz-form-control>
         </nz-form-item>
@@ -28,7 +29,8 @@
           <nz-form-label>Designation</nz-form-label>
           <nz-form-control nzErrorTip="Please input designation!">
             <nz-form-control>
-              <input nz-input formControlName="designation" placeholder="designation" [ngModel]="testimonialService.editTestimonialData()?.designation ?? ''"/>
+              <input nz-input formControlName="designation" placeholder="designation"
+                     [ngModel]="testimonialService.editTestimonialData()?.designation ?? ''"/>
             </nz-form-control>
           </nz-form-control>
         </nz-form-item>

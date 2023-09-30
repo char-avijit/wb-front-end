@@ -3,3 +3,8 @@ export interface Category {
   name: string;
   description?: string;
 }
+
+export interface CategoryBody {
+  name: string;
+  description?: string;
+}

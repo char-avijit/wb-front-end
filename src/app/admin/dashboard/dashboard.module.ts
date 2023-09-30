@@ -24,6 +24,8 @@ import { ShowcaseFormComponent } from './showcase/showcase-form/showcase-form.co
 import { ShowcaseDataComponent } from './showcase/showcase-data/showcase-data.component';
 import { SubscribersComponent } from './subscribers/subscribers.component';
 import { CategoryComponent } from './category/category.component';
+import { CategoryFormComponent } from './category/category-form/category-form.component';
+import { CategoryDataComponent } from './category/category-data/category-data.component';
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import { CategoryComponent } from './category/category.component';
     ShowcaseFormComponent,
     ShowcaseDataComponent,
     SubscribersComponent,
-    CategoryComponent
+    CategoryComponent,
+    CategoryFormComponent,
+    CategoryDataComponent
   ],
   imports: [
     CommonModule,

@@ -4,6 +4,7 @@ import {DashboardComponent} from "./dashboard.component";
 import {TestimonialComponent} from "./testimonial/testimonial.component";
 import {ShowcaseComponent} from "./showcase/showcase.component";
 import {SubscribersComponent} from "./subscribers/subscribers.component";
+import {CategoryComponent} from "./category/category.component";
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'subscribers',
     component: SubscribersComponent
+  },
+  {
+    path: 'categories',
+    component: CategoryComponent
   },
 ];
 
