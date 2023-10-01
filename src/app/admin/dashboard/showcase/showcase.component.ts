@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {AdminShowcaseService} from "./admin-showcase.service";
+import {NzMessageService} from "ng-zorro-antd/message";
 
 @Component({
   selector: 'app-showcase',
@@ -7,6 +8,6 @@ import {AdminShowcaseService} from "./admin-showcase.service";
   styleUrls: ['./showcase.component.scss']
 })
 export class ShowcaseComponent {
-  constructor(public adminShowcaseService: AdminShowcaseService) {
+  constructor(public adminShowcaseService: AdminShowcaseService, protected msg: NzMessageService,) {
   }
 }

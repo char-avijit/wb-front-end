@@ -7,10 +7,8 @@ import {AdminShowcaseService} from "../admin-showcase.service";
   styleUrls: ['./showcase-data.component.scss']
 })
 export class ShowcaseDataComponent implements OnInit{
-  constructor(public adminShowcaseService: AdminShowcaseService) {
+  constructor(protected adminShowcaseService: AdminShowcaseService,) {
   }
   ngOnInit(): void {
-    this.adminShowcaseService.getShowCases().then(r => {
-    });
   }
 }

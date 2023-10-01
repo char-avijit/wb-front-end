@@ -37,7 +37,6 @@ export class CategoryService {
           return throwError(() => new Error(err.error.message));
         })
       );
-
     res.subscribe(
       value => {
         this.totalCategories.set(value.count);
@@ -119,12 +118,18 @@ export class CategoryService {
     return res;
   }
 
-  createCategory() {
-
-    const body: CategoryBody = {
-      name: this.editCategoryForm.value.name ?? '',
-      description: this.editCategoryForm.value.description ?? '',
-    };
+  createCategory(name?: string) {
+    let body: CategoryBody;
+    if(name){
+      body = {
+        name,
+      }
+    }else {
+      body = {
+        name: this.editCategoryForm.value.name ??  '',
+        description: this.editCategoryForm.value.description ?? '',
+      };
+    }
     const res = this.http
       .post(BASE_URL + SERVICE_URL, body)
       .pipe(
